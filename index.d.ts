@@ -1,4 +1,4 @@
-export function IsNotNullOrUndefined(obj: any): boolean;
-export function IsValidDate(date: any): boolean;
-export function IsValidNumber(num: any): boolean;
-export function IsNonEmptyString(str: string | null | undefined): boolean;
+export function IsNotNullOrUndefined<T>(obj: T | null | undefined): obj is T;
+export function IsValidDate(date: any): date is Date;
+export function IsValidNumber(num: any): num is number;
+export function IsNonEmptyString(str: string | null | undefined): str is string;
