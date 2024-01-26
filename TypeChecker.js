@@ -3,7 +3,7 @@
  * @param {any} obj 
  * @returns {boolean}
  */
-export function IsNotNullOrUndefined(obj){
+module.exports.IsNotNullOrUndefined = function (obj){
     return obj !== null && obj !== undefined;
 }
 
@@ -12,7 +12,7 @@ export function IsNotNullOrUndefined(obj){
  * @param {any} date 
  * @returns {boolean}
  */
-export function IsValidDate(date){
+module.exports.IsValidDate = function(date){
     return IsNotNullOrUndefined(date) && 
     Object.prototype.toString.call(date) === "[object Date]" && !isNaN(date);
 }
@@ -22,7 +22,7 @@ export function IsValidDate(date){
  * @param {any} num 
  * @returns {boolean}
  */
-export function IsValidNumber(num){
+module.exports.IsValidNumber = function (num){
     return IsNotNullOrUndefined(num) && typeof(num) === "number" && !isNaN(num);
 }
 
@@ -31,6 +31,6 @@ export function IsValidNumber(num){
  * @param {string} str 
  * @returns {boolean}
  */
-export function IsNonEmptyString(str){
+module.exports.IsNonEmptyString = function (str){
     return IsNotNullOrUndefined(str) && str.toString().trim() !== "";
 }
